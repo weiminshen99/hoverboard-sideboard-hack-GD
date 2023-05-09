@@ -14,7 +14,7 @@
 
 #include "gd32f1x0.h"
 #include <stdio.h>
-#include "gd32f1x0_eval.h"
+//#include "gd32f1x0_eval.h"	// I don't have this
 
 /*!
     \brief      main function
