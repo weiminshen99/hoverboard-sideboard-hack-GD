@@ -45,23 +45,27 @@
 
 
 /* =========================== Defines LEDs =========================== */
-#define LED1_GPIO_Port              GPIOA
-#define LED1_Pin                    GPIO_PIN_0      // RED
-#define LED2_GPIO_Port              GPIOB
-#define LED2_Pin                    GPIO_PIN_9      // GREEN
-#define LED3_GPIO_Port              GPIOB
-#define LED3_Pin                    GPIO_PIN_8      // YELLOW
-#define LED4_GPIO_Port              GPIOB
-#define LED4_Pin                    GPIO_PIN_5      // BLUE1
-#define LED5_GPIO_Port              GPIOB
-#define LED5_Pin                    GPIO_PIN_4      // BLUE2
+
+#define LED1_Pin                    GPIO_PIN_3	// RED
+#define LED1_GPIO_Port              GPIOB
+
+#define LED2_Pin                    GPIO_PIN_15	// GREEN
+#define LED2_GPIO_Port              GPIOA
+
+#define LED3_Pin                    GPIO_PIN_12	// YELLOW
+#define LED3_GPIO_Port              GPIOA
+
+#define LED4_Pin                    GPIO_PIN_0	// BLUE1
+#define LED4_GPIO_Port              GPIOA
+
+#define LED5_Pin                    GPIO_PIN_1	// BLUE2
+#define LED5_GPIO_Port              GPIOA
 
 #define LED1_SET                    (0x01)
 #define LED2_SET                    (0x02)
 #define LED3_SET                    (0x04)
 #define LED4_SET                    (0x08)
 #define LED5_SET                    (0x10)
-
 
 /* =========================== Defines SENSORS =========================== */
 #define SENSOR1_GPIO_Port           GPIOA
@@ -120,10 +124,10 @@ typedef enum {READ = 0, WRITE = !READ} i2c_cmd;
 #define MPU_I2C                     I2C0
 #define MPU_RCU_I2C                 RCU_I2C0
 #define MPU_SCL_GPIO_Port           GPIOB
-#define MPU_SCL_Pin                 GPIO_PIN_6
+#define MPU_SCL_Pin                 GPIO_PIN_8
 #define MPU_SDA_GPIO_Port           GPIOB
-#define MPU_SDA_Pin                 GPIO_PIN_7
-#define I2C_OWN_ADDRESS7            0x24
+#define MPU_SDA_Pin                 GPIO_PIN_9
+#define I2C_OWN_ADDRESS7            0x24	// 0x34?
 
 #ifdef AUX45_USE_I2C
     #define AUX_I2C                 I2C1
@@ -132,7 +136,7 @@ typedef enum {READ = 0, WRITE = !READ} i2c_cmd;
     #define AUX_SCL_Pin             GPIO_PIN_9
     #define AUX_SDA_GPIO_Port       GPIOA
     #define AUX_SDA_Pin             GPIO_PIN_10
-    #define AUX_I2C_OWN_ADDRESS7    0x34
+    #define AUX_I2C_OWN_ADDRESS7    0x34	// 0x24?
 #endif
 
 /* =========================== Defines MPU-6050 =========================== */
